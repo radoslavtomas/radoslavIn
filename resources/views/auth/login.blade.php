@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -54,6 +54,7 @@
                         </div>
 
                         <div class="right-align">
+                            <br>
                             <a class="red-text lighten-1" href="{{ route('password.request') }}">
                                 Forgot Your Password?
                             </a>
