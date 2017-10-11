@@ -16,7 +16,7 @@
 <body>
 <div id="app">
     <nav>
-        <div class="nav-wrapper amber darken-3">
+        <div class="nav-wrapper blue-grey">
             <a href="{{ url('/') }}" class="brand-logo"><logo-rado></logo-rado></a>
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
@@ -35,6 +35,7 @@
     </nav>
 
     @yield('content')
+
 </div>
 
 <!-- Scripts -->
