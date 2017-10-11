@@ -16,16 +16,16 @@
 <body>
     <div id="app">
         <nav>
-            <div class="nav-wrapper">
-                <a href="{{ url('/') }}" class="brand-logo">{{ config('app.name', 'Laravel') }}</a>
+            <div class="nav-wrapper amber darken-3">
+                <a href="{{ url('/') }}" class="brand-logo"><logo-rado></logo-rado></a>
                 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     @guest
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        <li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>
+                        <li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>
                     @else
                         <li>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="material-icons left">arrow_forward</i>
                                         Logout
                              </a>
 
@@ -37,11 +37,11 @@
                 </ul>
                 <ul class="side-nav" id="mobile-menu">
                     @guest
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Register</a></li>
+                        <li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>
+                        <li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>
                     @else
                         <li>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="material-icons left">arrow_forward</i>
                                 Logout
                             </a>
 

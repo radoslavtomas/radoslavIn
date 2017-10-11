@@ -2,76 +2,70 @@
 
 @section('content')
 <div class="container">
+
+    <br>
+    <br>
+
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+        <div class="col s12 m8 offset-m2">
+            <div class="card grey lighten-4">
+                <div class="card-content">
+                    <form method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
+                        <span class="card-title">Register</span>
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
+                        <div class="input-field {{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="name">Your Name</label>
+                            <input id="name" type="text" name="name" value="{{ old('name') }}" required>
+                            <div>
                                 @if ($errors->has('name'))
-                                    <span class="help-block">
+                                    <span class="red-text lighten-1">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
+                        <div class="input-field {{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email">E-Mail Address</label>
+                            <input id="email" type="email" name="email" value="{{ old('email') }}" required>
+                            <div>
                                 @if ($errors->has('email'))
-                                    <span class="help-block">
+                                    <span class="red-text lighten-1">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
+                        <div class="input-field {{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" name="password" required>
+                            <div>
                                 @if ($errors->has('password'))
-                                    <span class="help-block">
+                                    <span class="red-text lighten-1">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
+                        <div class="input-field">
+                            <label for="password-confirm">Confirm Password</label>
+                            <input id="password-confirm" type="password" name="password_confirmation" required>
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
+                        <div class="center">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Register
+                                <i class="material-icons right">send</i>
+                            </button>
+
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 @endsection
