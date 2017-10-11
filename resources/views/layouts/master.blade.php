@@ -20,16 +20,24 @@
             <a href="{{ url('/') }}" class="brand-logo"><logo-rado></logo-rado></a>
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About me</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <ul class="side-nav" id="mobile-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><div class="user-view">
+                        <div class="background">
+                            <img src="img/sky.jpg">
+                        </div>
+                        <a href="#!user"><img class="circle" src="{{ asset('img/rado.jpg') }}"></a>
+                        <a href="#!name"><span class="white-text name">Radoslav Tomas</span></a>
+                        <a href="#!email"><span class="white-text email">radoslav.tomas@gmail.com</span></a>
+                    </div></li>
+                <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+                <li><a href=""><i class="material-icons">perm_identity</i>About me</a></li>
+                <li><a href=""><i class="material-icons">bubble_chart</i>Portfolio</a></li>
+                <li><a href=""><i class="material-icons">contact_mail</i>Contact</a></li>
             </ul>
         </div>
     </nav>
