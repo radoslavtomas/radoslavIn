@@ -14,7 +14,7 @@
                     <div class="card-content  blue-grey-text text-darken-3 center">
                         <h1 style="font-family: 'VT323', monospace;">About me</h1>
                         <div class="row">
-                            <div class="col s2 offset-s5">
+                            <div class="col s6 offset-s3 m4 offset-m4">
                                 <img class="responsive-img circle" src="{{ asset('img/rado.jpg') }}" alt="Radoslav Tomas">
                             </div>
                         </div>
