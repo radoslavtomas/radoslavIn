@@ -11,14 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/about', function () {
-	return view('about');
-});
-
+Route::get('/', 'PagesController@getIndex')->name('index');
+Route::get('about', 'PagesController@getAbout')->name('about');
+Route::get('portfolio', 'PagesController@getPortfolio')->name('portfolio');
+Route::get('contact', 'PagesController@getContact')->name('contact');
 
 Auth::routes();
 

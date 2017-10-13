@@ -20,10 +20,10 @@
             <a href="{{ url('/') }}" class="brand-logo"><logo-rado></logo-rado></a>
             <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About me</a></li>
-                <li><a href="/portfolio">Portfolio</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="{{ route('index') }}">Home</a></li>
+                <li><a href="{{ route('about') }}">About me</a></li>
+                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
             <ul class="side-nav" id="mobile-menu">
                 <li><div class="user-view">
@@ -34,10 +34,10 @@
                         <a href="#!name"><span class="white-text name">Radoslav Tomas</span></a>
                         <a href="#!email"><span class="white-text email">radoslav.tomas@gmail.com</span></a>
                     </div></li>
-                <li><a href="/"><i class="material-icons">home</i>Home</a></li>
-                <li><a href=""><i class="material-icons">perm_identity</i>About me</a></li>
-                <li><a href=""><i class="material-icons">bubble_chart</i>Portfolio</a></li>
-                <li><a href=""><i class="material-icons">contact_mail</i>Contact</a></li>
+                <li><a href="{{ route('index') }}"><i class="material-icons">home</i>Home</a></li>
+                <li><a href="{{ route('about') }}"><i class="material-icons">perm_identity</i>About me</a></li>
+                <li><a href="{{ route('portfolio') }}"><i class="material-icons">bubble_chart</i>Portfolio</a></li>
+                <li><a href="{{ route('contact') }}"><i class="material-icons">contact_mail</i>Contact</a></li>
             </ul>
         </div>
     </nav>

@@ -12,7 +12,7 @@
                     <div style="height: 25px;background-image: url('{{asset("img/wave.png")}}');background-position: center; background-size: contain"></div>
 
                     <div class="card-content  blue-grey-text text-darken-3 center">
-                        <h1 style="font-family: 'VT323', monospace;">Hi, I am Rado</h1>
+                        <h1 style="font-family: 'VT323', monospace;text-shadow: #fff 2px 2px;">Hi, I am Rado</h1>
                         <p>A keen front-end developer currently living in Liverpool. I believe in beautiful web applications that serve users in everyday life. I am always looking for new challenges and collaborations.</p>
                         <br>
                         <h4 style="font-family: 'VT323', monospace;">Not just development, it's also story</h4>
