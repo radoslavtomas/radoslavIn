@@ -9867,3 +9867,8 @@ textarea.materialize-textarea {
   border-bottom: #ccd0d2 1px solid;
 }
 
+.app-heading {
+  font-family: 'VT323', monospace;
+  text-shadow: #fff 2px 2px;
+}
+

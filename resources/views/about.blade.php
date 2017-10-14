@@ -10,9 +10,9 @@
             <div class="col s12 m10 offset-m1">
                 <div class="card  green lighten-4">
                     <br>
-                    <div style="height: 25px;background-image: url('{{asset("img/wave.png")}}');background-position: center; background-size: contain"></div>
+                    <wave-divider></wave-divider>
                     <div class="card-content  blue-grey-text text-darken-3 center">
-                        <h1 style="font-family: 'VT323', monospace;">About me</h1>
+                        <h1 class="app-heading">About me</h1>
                         <div class="row">
                             <div class="col s6 offset-s3 m4 offset-m4">
                                 <img class="responsive-img circle" src="{{ asset('img/rado.jpg') }}" alt="Radoslav Tomas">
@@ -42,7 +42,7 @@
                     </div>
                     <br>
                     <br>
-                    <div style="height: 25px;background-image: url('{{asset("img/wave.png")}}');background-position: center; background-size: contain"></div>
+                    <wave-divider></wave-divider>
                     <br>
                 </div>
             </div>

@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('wave-divider', require('./components/WaveDividerComponent.vue'));
 Vue.component('logo-rado', require('./components/LogoComponent.vue'));
 
 const app = new Vue({
