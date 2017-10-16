@@ -49,13 +49,6 @@
 
                         <br>
 
-                        {{--<div class="flex-list">--}}
-                            {{--<a href=""><img src="img/portfolios/kota.png"></a>--}}
-                            {{--<a href=""><img src="img/portfolios/medan.png"></a>--}}
-                            {{--<a href=""><img src="img/portfolios/noseyfish.png"></a>--}}
-                            {{--<a href=""><img src="img/portfolios/radoslavtomas.png"></a>--}}
-                        {{--</div>--}}
-
                         <div class="row">
 
                             <div class="col s12 m10 offset-m1">
