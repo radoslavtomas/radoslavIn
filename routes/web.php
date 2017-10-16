@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\HomeController;
+
 Route::get('/', 'PagesController@getIndex')->name('index');
 Route::get('about', 'PagesController@getAbout')->name('about');
 Route::get('portfolio', 'PagesController@getPortfolio')->name('portfolio');
@@ -18,4 +20,9 @@ Route::get('contact', 'PagesController@getContact')->name('contact');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')->prefix('admin')->group(function() {
+	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/homepage', 'HomeController@homepage')->name('homepage');
+});
+
+

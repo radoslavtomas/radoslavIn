@@ -54,7 +54,35 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container">
+            <br>
+            <div class="row">
+                @if(Auth::check())
+                    <div class="col s4">
+                                <ul class="collection">
+                                    <li class="collection-item">
+                                        <a href="{{ route('home') }}">Admin Dashboard</a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <a href="{{ route('homepage') }}">Home page</a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <a href="{{ route('home') }}">About me page</a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <a href="{{ route('home') }}">Portfolio page</a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <a href="{{ route('home') }}">Contact page</a>
+                                    </li>
+                                </ul>
+                    </div>
+                @endif
+                <div class="col s8">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
