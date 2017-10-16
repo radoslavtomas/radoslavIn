@@ -61,7 +61,10 @@
                                             <div>
                                                 <img class="responsive-img" width="100" src="img/portfolios/kota.png" alt="">
                                             </div>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolores eveniet, fugit, impedit in minus necessitatibus nesciunt non nulla numquam placeat provident quisquam quod ratione repudiandae sint tempora unde vel?</span></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolores eveniet, fugit, impedit in minus necessitatibus nesciunt non nulla numquam placeat provident quisquam quod ratione repudiandae sint tempora unde vel?</p>
+                                            <br>
+                                            <a href="" class="btn">kota.sk</a>
+                                        </div>
                                     </li>
                                     <li>
                                         <div class="collapsible-header">
@@ -71,7 +74,10 @@
                                             <div>
                                                 <img class="responsive-img" width="100" src="img/portfolios/medan.png" alt="">
                                             </div>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, placeat, sed. Corporis cum eius facilis id illo libero minima obcaecati quae quo, rem. Accusantium architecto debitis dolore minus quibusdam similique.</span></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, placeat, sed. Corporis cum eius facilis id illo libero minima obcaecati quae quo, rem. Accusantium architecto debitis dolore minus quibusdam similique.</p>
+                                            <br>
+                                            <a href="" class="btn">medan.sk</a>
+                                        </div>
                                     </li>
                                     <li>
                                         <div class="collapsible-header">
@@ -81,7 +87,10 @@
                                             <div>
                                                 <img class="responsive-img" width="100" src="img/portfolios/noseyfish.png" alt="">
                                             </div>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi consectetur culpa deleniti error est fugiat, illum iusto, labore laborum maxime nobis nulla numquam recusandae repudiandae veritatis vitae? Nemo, porro?</span></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi consectetur culpa deleniti error est fugiat, illum iusto, labore laborum maxime nobis nulla numquam recusandae repudiandae veritatis vitae? Nemo, porro?</p>
+                                            <br>
+                                            <a href="" class="btn">noseyfish.sk</a>
+                                        </div>
                                     </li>
                                     <li>
                                         <div class="collapsible-header">
@@ -91,7 +100,10 @@
                                             <div>
                                                 <img class="responsive-img" width="100" src="img/portfolios/radoslavtomas.png" alt="">
                                             </div>
-                                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aperiam consequatur eius et excepturi mollitia nesciunt quos temporibus vel. Aliquam animi deserunt inventore ipsa ipsum molestiae pariatur qui quidem reprehenderit.</span></div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aperiam consequatur eius et excepturi mollitia nesciunt quos temporibus vel. Aliquam animi deserunt inventore ipsa ipsum molestiae pariatur qui quidem reprehenderit.</p>
+                                            <br>
+                                            <a href="" class="btn">radoslav.sk</a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
