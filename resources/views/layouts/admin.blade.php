@@ -64,7 +64,7 @@
                                         <a href="{{ route('home') }}">Admin Dashboard</a>
                                     </li>
                                     <li class="collection-item">
-                                        <a href="{{ route('homepage') }}">Home page</a>
+                                        <a href="{{ route('getHomepage') }}">Home page</a>
                                     </li>
                                     <li class="collection-item">
                                         <a href="{{ route('home') }}">About me page</a>
@@ -78,9 +78,9 @@
                                 </ul>
                     </div>
                 @endif
-                <div class="col s8">
-                    @yield('content')
-                </div>
+
+                @yield('content')
+
             </div>
         </div>
     </div>

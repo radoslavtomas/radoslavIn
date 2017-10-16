@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Homepage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,11 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+		$data = Homepage::all();
+
+        return view('admin.home')
+			->with('data', $data);
     }
 
-	public function homepage()
+	public function getHomepage()
 	{
-		return view('admin.homePage');
+		$data = Homepage::all();
+		return view('admin.homePage')
+			->with('data', $data);
 	}
 }

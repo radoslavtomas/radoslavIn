@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHomePageTable extends Migration
+class CreateHomepagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateHomePageTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_page', function (Blueprint $table) {
+        Schema::create('homepages', function (Blueprint $table) {
             $table->increments('id');
 			$table->string('main_title', 200);
 			$table->string('sub_title', 200);
 			$table->text('main_text');
 			$table->text('sub_text');
-			$table->string('button_text', 20);
-			$table->string('button_link', 200);
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateHomePageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_page');
+        Schema::dropIfExists('homepages');
     }
 }

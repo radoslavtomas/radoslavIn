@@ -22,7 +22,8 @@ Auth::routes();
 
 Route::middleware('auth')->prefix('admin')->group(function() {
 	Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/homepage', 'HomeController@homepage')->name('homepage');
+	Route::get('/homepage', 'HomeController@getHomepage')->name('getHomepage');
+	Route::post('homepage', 'HomeController@postHomepage')->name('postHomepage');
 });
 
 
