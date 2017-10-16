@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 <body>
 <div id="app">
@@ -44,9 +45,36 @@
 
     @yield('content')
 
+    <footer class="page-footer blue-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Radoslav Tomas | radoslav.in</h5>
+                    <p class="grey-text text-lighten-4">Full stack web developer | Liverpool</p>
+                    <p class="grey-text text-lighten-4">radoslav.tomas@gmail.com</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About me</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Portfolio</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align">
+                2017
+            </div>
+        </div>
+    </footer>
+
 </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+@yield('javascript')
+
 </body>
 </html>

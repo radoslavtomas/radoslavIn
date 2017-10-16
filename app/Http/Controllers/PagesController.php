@@ -18,11 +18,11 @@ class PagesController extends Controller
 
 	public function getPortfolio()
 	{
-		//
+		return view('portfolio');
     }
 
 	public function getContact()
 	{
-		//
+		return view('contact');
     }
 }
