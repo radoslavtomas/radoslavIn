@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Aboutpage;
 use App\Homepage;
+use App\Portfolio;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -24,11 +25,18 @@ class PagesController extends Controller
 
 	public function getPortfolio()
 	{
-		return view('pages.portfolio');
+		$portfolios = Portfolio::all();
+		return view('pages.portfolio')
+			->with('portfolios', $portfolios);
     }
 
 	public function getContact()
 	{
 		return view('pages.contact');
+    }
+
+	public function getPortfolioById($id)
+	{
+		return Portfolio::findOrFail($id);
     }
 }

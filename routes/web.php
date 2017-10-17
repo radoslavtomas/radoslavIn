@@ -18,6 +18,8 @@ Route::get('about', 'PagesController@getAbout')->name('about');
 Route::get('portfolio', 'PagesController@getPortfolio')->name('portfolio');
 Route::get('contact', 'PagesController@getContact')->name('contact');
 
+Route::get('getPortfolioById/{id}', 'PagesController@getPortfolioById');
+
 Auth::routes();
 
 Route::middleware('auth')->prefix('admin')->group(function() {
