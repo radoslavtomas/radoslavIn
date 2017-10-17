@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Aboutpage;
 use App\Homepage;
 
 use Illuminate\Http\Request;
@@ -26,13 +27,13 @@ class AdminController extends Controller
      */
     public function getDashboard()
     {
-        return view('admin.home');
+        return view('admin.dashboard');
     }
 
 	public function getHome()
 	{
 		$data = Homepage::all()->first();
-		return view('admin.homePage')
+		return view('admin.home')
 			->with('data', $data);
 	}
 
@@ -60,7 +61,37 @@ class AdminController extends Controller
 
 	public function getAbout()
 	{
-		//
+		$data = Aboutpage::all()->first();
+		return view('admin.about')
+			->with('data', $data);
+	}
+
+	public function postAbout(Request $request)
+	{
+		$request->validate([
+			'title' => 'required|max:200',
+			'image' => 'image',
+			'text' => 'required'
+		]);
+
+		$data = Aboutpage::all()->first();
+
+		if($request->hasFile('featured_image'))
+		{
+			$image = $request->image;
+			$image_new_name = time().$image->getClientOriginalName();
+			$image->move('uploads/img/profiles/', $image_new_name);
+			$data->image = '/uploads/img/profiles/'.$image_new_name;
+		}
+
+		$data->title = $request->title;
+		$data->text = $request->text;
+
+		$data->save();
+
+		Session::flash('success', 'About page was successfully updated.');
+
+		return redirect()->route('getAbout');
 	}
 
 	public function getPortfolio()

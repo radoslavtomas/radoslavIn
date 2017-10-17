@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Aboutpage;
 use App\Homepage;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,9 @@ class PagesController extends Controller
 
 	public function getAbout()
 	{
-		return view('pages.about');
+		$data = Aboutpage::all()->first();
+		return view('pages.about')
+			->with('data', $data);
     }
 
 	public function getPortfolio()

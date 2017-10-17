@@ -13,27 +13,13 @@
                     <br>
                     <wave-divider></wave-divider>
                     <div class="card-content  blue-grey-text text-darken-3 center">
-                        <h1 class="app-heading">About me</h1>
+                        <h1 class="app-heading">{{ $data->title }}</h1>
                         <div class="row">
                             <div>
-                                <img class="responsive-img circle" src="{{ asset('img/rado.jpg') }}" width="200" alt="Radoslav Tomas">
+                                <img class="responsive-img circle" src="{{ $data->image }}" width="200" alt="Radoslav Tomas">
                             </div>
                         </div>
-                        <p>
-                            Born and raised in Slovakia, I am currently developing good accent and manners in UK. After studying data journalism, I have been working for market research company as an analyst. Working on large projects on the Slovak market helped me to train strategic thinking. On the way, my soul has also been dragged to several personal activities where I could improve my digital skills.
-                        </p>
-                        <br>
-                        <p>
-                            Few years ago, I’ve accepted a call of my heart and made a move to UK. Here I restarted my career as a front-end developer.
-                        </p>
-                        <br>
-                        <p>
-                            Today, I work as freelancer and participate on various digital projects. I’ve never forgotten to ask why things are the way they are, and how they can be improved. I have a simple goal: make things better for the user.
-                        </p>
-                        <br>
-                        <p>
-                            If you think I am the right person for your project, don’t hesitate to drop me a line or two. I don’t bite…
-                        </p>
+                        <p>{{ $data->text }}</p>
                     </div>
                     <br>
 
