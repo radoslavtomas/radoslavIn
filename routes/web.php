@@ -21,9 +21,14 @@ Route::get('contact', 'PagesController@getContact')->name('contact');
 Auth::routes();
 
 Route::middleware('auth')->prefix('admin')->group(function() {
-	Route::get('/home', 'HomeController@index')->name('home');
-	Route::get('/homepage', 'HomeController@getHomepage')->name('getHomepage');
-	Route::post('homepage', 'HomeController@postHomepage')->name('postHomepage');
+	Route::get('/home', 'AdminController@getDashboard')->name('getDashboard');
+
+	Route::get('/homepage', 'AdminController@getHome')->name('getHome');
+	Route::post('homepage', 'AdminController@postHome')->name('postHome');
+
+	Route::get('/about', 'AdminController@getAbout')->name('getAbout');
+	Route::get('/portfolio', 'AdminController@getPortfolio')->name('getPortfolio');
+	Route::get('/contact', 'AdminController@getContact')->name('getContact');
 });
 
 

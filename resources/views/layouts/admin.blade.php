@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles')
 </head>
 <body>
     <div id="app">
@@ -61,19 +62,19 @@
                     <div class="col s4">
                                 <ul class="collection">
                                     <li class="collection-item">
-                                        <a href="{{ route('home') }}">Admin Dashboard</a>
+                                        <a href="{{ route('getDashboard') }}">Admin Dashboard</a>
                                     </li>
                                     <li class="collection-item">
-                                        <a href="{{ route('getHomepage') }}">Home page</a>
+                                        <a href="{{ route('getHome') }}">Home page</a>
                                     </li>
                                     <li class="collection-item">
-                                        <a href="{{ route('home') }}">About me page</a>
+                                        <a href="{{ route('getAbout') }}">About me page</a>
                                     </li>
                                     <li class="collection-item">
-                                        <a href="{{ route('home') }}">Portfolio page</a>
+                                        <a href="{{ route('getPortfolio') }}">Portfolio page</a>
                                     </li>
                                     <li class="collection-item">
-                                        <a href="{{ route('home') }}">Contact page</a>
+                                        <a href="{{ route('getContact') }}">Contact page</a>
                                     </li>
                                 </ul>
                     </div>
@@ -87,5 +88,14 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scripts')
+    <script>
+        @if(Session::has('success'))
+        Materialize.toast("{{ Session::get('success') }}", 4000, 'green lighten-3 blue-grey-text text-darken-4');
+        @endif
+        @if(Session::has('info'))
+        Materialize.toast("{{ Session::get('info') }}", 4000, 'deep-orange lighten-3 blue-grey-text text-darken-4');
+        @endif
+    </script>
 </body>
 </html>

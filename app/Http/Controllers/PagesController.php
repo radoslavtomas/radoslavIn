@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Homepage;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
 	public function getIndex()
 	{
-		return view('pages.index');
+		$data = Homepage::all()->first();
+		return view('pages.index')
+			->with('data', $data);
     }
 
 	public function getAbout()
