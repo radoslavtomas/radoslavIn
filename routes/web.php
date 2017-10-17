@@ -31,7 +31,7 @@ Route::middleware('auth')->prefix('admin')->group(function() {
 	Route::get('about', 'AdminController@getAbout')->name('getAbout');
 	Route::post('about', 'AdminController@postAbout')->name('postAbout');
 
-	Route::get('portfolio', 'AdminController@getPortfolio')->name('getPortfolio');
+	Route::resource('portfolio', 'PortfolioController');
 	Route::get('contact', 'AdminController@getContact')->name('getContact');
 });
 

@@ -60,7 +60,8 @@
             <div class="row">
                 @if(Auth::check())
                     <div class="col s4">
-                                <ul class="collection">
+                                <ul class="collection with-header">
+                                    <li class="collection-header"><h5>Admin panel</h5></li>
                                     <li class="collection-item">
                                         <a href="{{ route('getDashboard') }}">Admin Dashboard</a>
                                     </li>
@@ -71,7 +72,7 @@
                                         <a href="{{ route('getAbout') }}">About me page</a>
                                     </li>
                                     <li class="collection-item">
-                                        <a href="{{ route('getPortfolio') }}">Portfolio page</a>
+                                        <a href="{{ route('portfolio.index') }}">Portfolio page</a>
                                     </li>
                                     <li class="collection-item">
                                         <a href="{{ route('getContact') }}">Contact page</a>

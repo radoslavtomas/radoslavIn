@@ -11,12 +11,5 @@
                     I am convenient because I require little markup to use effectively.</p>
             </div>
         </div>
-
-
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-        @endif
     </div>
 @endsection
