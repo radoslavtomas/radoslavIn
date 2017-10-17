@@ -70,14 +70,16 @@ class AdminController extends Controller
 	{
 		$request->validate([
 			'title' => 'required|max:200',
-			'image' => 'image',
 			'text' => 'required'
 		]);
 
 		$data = Aboutpage::all()->first();
 
-		if($request->hasFile('featured_image'))
+		if($request->hasFile('image'))
 		{
+			$request->validate([
+				'image' => 'image'
+			]);
 			$image = $request->image;
 			$image_new_name = time().$image->getClientOriginalName();
 			$image->move('uploads/img/profiles/', $image_new_name);

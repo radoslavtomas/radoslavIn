@@ -44,7 +44,7 @@
                                                 I am convenient because I require little markup to use effectively.</p>
                                         </div>
                                         <div class="card-action">
-                                            <a id="pf_link" class="grey-text text-darken-3" href="#">Visit</a>
+                                            <a id="pf_link" target="_blank" class="grey-text text-darken-3" href="#">Visit</a>
                                         </div>
                                     </div>{{--inner cad end--}}
                                 </div>{{--col s12 end--}}

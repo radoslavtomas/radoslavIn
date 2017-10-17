@@ -1,11 +1,13 @@
 @extends('layouts.admin')
 
+
 @section('content')
+
     <div class="col s8">
 
         <div class="card">
             <div class="card-content">
-                <span class="card-title">About Page</span>
+                <span class="card-title">Edit portfolio: {{ $portfolio->name }}</span>
                 <hr>
                 <br>
                 @if ($errors->any())
@@ -18,20 +20,21 @@
                     </div>
                 @endif
                 <div class="row">
-                    <form class="col s12" action="{{ route('postAbout') }}" method="POST" enctype="multipart/form-data">
+                    <form class="col s12" action="{{ route('portfolio.update', $portfolio->id) }}" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="put">
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="title" name="title" type="text" value="{{ $data->title }}" class="validate">
-                                <label for="title">Title</label>
+                                <input id="name" name="name" type="text" value="{{ $portfolio->name }}" class="validate">
+                                <label for="title">Name</label>
                             </div>
                         </div>
                         <div>
-                            <img class="responsive-img preview" width="100" src="{{ $data->image }}" alt="">
+                            <img class="responsive-img preview" width="100" src="{{ $portfolio->image }}" alt="{{ $portfolio->name }}">
                         </div>
                         <div class="file-field input-field">
                             <div class="btn">
-                                <span>File</span>
+                                <span>Image</span>
                                 <input name="image" type="file">
                             </div>
                             <div class="file-path-wrapper">
@@ -40,13 +43,19 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea id="text" rows="20" name="text" class="materialize-textarea">{{ $data->text }}</textarea>
-                                <label for="text">Main text</label>
+                                <textarea id="description" name="description" class="materialize-textarea">{{ $portfolio->description }}</textarea>
+                                <label for="text">Description</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="link" name="link" type="url" value="{{ $portfolio->link }}" class="validate">
+                                <label for="title">Link</label>
                             </div>
                         </div>
 
 
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Edit About Page
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Edit
                             <i class="material-icons right">send</i>
                         </button>
                     </form>
@@ -56,7 +65,8 @@
         </div>
 
     </div>{{--end col s8--}}
-@endsection
+
+@stop
 
 @section('scripts')
 
@@ -78,17 +88,7 @@
             });
 
         });
+
     </script>
-
-@stop
-
-@section('styles')
-
-    <style>
-        .error {
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
 
 @stop

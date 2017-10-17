@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Portfolio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class PortfolioController extends Controller
 {
@@ -26,7 +27,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.portfolio.create');
     }
 
     /**
@@ -37,7 +38,27 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+			'name' => 'string|required',
+			'image' => 'image|required',
+			'description' => 'required',
+			'link' => 'url|required'
+		]);
+
+		$image = $request->image;
+		$image_new_name = time().$image->getClientOriginalName();
+		$image->move('uploads/img/portfolios/', $image_new_name);
+
+		Portfolio::create([
+			'name' => $request->name,
+			'image' => '/uploads/img/portfolios/'.$image_new_name,
+			'description' => $request->description,
+			'link' => $request->link,
+		]);
+
+		Session::flash('success', 'New portfolio was successfully added.');
+
+		return redirect()->route('portfolio.index');
     }
 
     /**
@@ -59,7 +80,10 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $portfolio = Portfolio::findOrFail($id);
+
+        return view('admin.portfolio.edit')
+			->with('portfolio', $portfolio);
     }
 
     /**
@@ -71,7 +95,34 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		$request->validate([
+			'name' => 'string|required',
+			'description' => 'required',
+			'link' => 'url|required'
+		]);
+
+		$portfolio = Portfolio::findOrFail($id);
+
+		if($request->hasFile('image'))
+		{
+			$request->validate([
+				'image' => 'image',
+			]);
+			$image = $request->image;
+			$image_new_name = time().$image->getClientOriginalName();
+			$image->move('uploads/img/portfolios/', $image_new_name);
+			$portfolio->image = '/uploads/img/profiles/'.$image_new_name;
+		}
+
+		$portfolio->name = $request->name;
+		$portfolio->description = $request->description;
+		$portfolio->link = $request->link;
+
+		$portfolio->save();
+
+		Session::flash('success', 'Portfolio has been successfully updated.');
+
+		return redirect()->route('portfolio.index');
     }
 
     /**
@@ -82,6 +133,11 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Portfolio::destroy($id);
+
+		Session::flash('success', 'Portfolio has been successfully deleted.');
+
+		return redirect()->route('portfolio.index');
+
     }
 }
