@@ -15,27 +15,28 @@
                     <div class="card-content  blue-grey-text text-darken-3 center">
                         <h1 class="app-heading">Contact me</h1>
                         <div class="row">
-                            <form class="col s12">
+                            <form class="col s12" method="POST" action="{{ route('contact.post') }}">
+                                {{ csrf_field() }}
                                 <div class="row">
                                     <div class="input-field col s12 m6">
-                                        <input id="name" type="text" class="validate">
+                                        <input id="name" name="name" type="text" class="validate">
                                         <label for="first_name">Your Name</label>
                                     </div>
                                     <div class="input-field col s12 m6">
-                                        <input id="last_name" type="email" class="validate">
-                                        <label for="last_name">Your email</label>
+                                        <input id="email" name="email" type="email" class="validate">
+                                        <label for="email">Your email</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <textarea id="message" class="materialize-textarea"></textarea>
+                                            <textarea id="message" name="message" class="materialize-textarea"></textarea>
                                             <label for="message">Your message</label>
                                         </div>
                                     </div>
                                 </div>
 
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Send
+                                <button class="btn waves-effect waves-light" type="submit">Send
                                     <i class="material-icons right">send</i>
                                 </button>
                             </form>

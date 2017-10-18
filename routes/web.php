@@ -17,8 +17,13 @@ Route::get('/', 'PagesController@getIndex')->name('index');
 Route::get('about', 'PagesController@getAbout')->name('about');
 Route::get('portfolio', 'PagesController@getPortfolio')->name('portfolio');
 Route::get('contact', 'PagesController@getContact')->name('contact');
+Route::post('contact', 'PagesController@postContact')->name('contact.post');
 
 Route::get('getPortfolioById/{id}', 'PagesController@getPortfolioById');
+
+Route::get('email', function(){
+	//
+});
 
 Auth::routes();
 
@@ -32,6 +37,7 @@ Route::middleware('auth')->prefix('admin')->group(function() {
 	Route::post('about', 'AdminController@postAbout')->name('postAbout');
 
 	Route::resource('portfolio', 'PortfolioController');
+
 	Route::get('contact', 'AdminController@getContact')->name('getContact');
 });
 
