@@ -21,10 +21,6 @@ Route::post('contact', 'PagesController@postContact')->name('contact.post');
 
 Route::get('getPortfolioById/{id}', 'PagesController@getPortfolioById');
 
-Route::get('email', function(){
-	//
-});
-
 Auth::routes();
 
 Route::middleware('auth')->prefix('admin')->group(function() {

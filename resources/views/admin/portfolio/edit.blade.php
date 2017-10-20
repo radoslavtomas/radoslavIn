@@ -44,7 +44,6 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="description" name="description" class="materialize-textarea">{{ $portfolio->description }}</textarea>
-                                <label for="text">Description</label>
                             </div>
                         </div>
                         <div class="row">
@@ -69,6 +68,15 @@
 @stop
 
 @section('scripts')
+
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: '#description',
+            plugins: 'link',
+            menubar: false
+        });
+    </script>
 
     <script>
         $('.input-field input[type=file]').on('change', function() {

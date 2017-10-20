@@ -38,10 +38,9 @@
                                             <span class="card-title centre-align" id="pf_title">Title</span>
                                             <div class="divider"></div>
                                             <div>
-                                                <img id="pf_image" class="responsive-img" width="100" src="img/portfolios/kota.png" alt="">
+                                                <img id="pf_image" class="responsive-img" width="100" src="img/portfolios/kota.png" alt="Defualt image">
                                             </div>
-                                            <p id="pf_description">I am a very simple card. I am good at containing small bits of information.
-                                                I am convenient because I require little markup to use effectively.</p>
+                                            <div id="pf_description">Description...</div>
                                         </div>
                                         <div class="card-action">
                                             <a id="pf_link" target="_blank" class="grey-text text-darken-3" href="#">Visit</a>
@@ -64,19 +63,20 @@
 
 @stop
 
-@section('javascript')
+@section('scripts')
     <script>
+        console.log('Script started');
         $('.slider').slider();
+        console.log('carousel started.');
         $('.carousel').carousel({
             onCycleTo: function(data) {
                 var el = $('li.carousel-item.active');
                 var id = el.data('id');
                 axios.get('getPortfolioById/' + id)
                     .then(function(portfolio){
-                        console.log(portfolio.data);
                         $('#pf_title').text(portfolio.data.name);
                         $('#pf_image').attr('src', portfolio.data.image);
-                        $('#pf_description').text(portfolio.data.description);
+                        $('#pf_description').html(portfolio.data.description);
                         $('#pf_link').attr('href', portfolio.data.link);
                     });
             }

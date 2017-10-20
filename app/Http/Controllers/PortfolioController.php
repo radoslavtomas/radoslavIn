@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Portfolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Mews\Purifier\Facades\Purifier;
 
 class PortfolioController extends Controller
 {
@@ -52,7 +53,7 @@ class PortfolioController extends Controller
 		Portfolio::create([
 			'name' => $request->name,
 			'image' => '/uploads/img/portfolios/'.$image_new_name,
-			'description' => $request->description,
+			'description' => Purifier::clean($request->description),
 			'link' => $request->link,
 		]);
 
@@ -115,7 +116,7 @@ class PortfolioController extends Controller
 		}
 
 		$portfolio->name = $request->name;
-		$portfolio->description = $request->description;
+		$portfolio->description = Purifier::clean($request->description);
 		$portfolio->link = $request->link;
 
 		$portfolio->save();
