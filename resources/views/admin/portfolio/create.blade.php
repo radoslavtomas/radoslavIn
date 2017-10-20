@@ -41,9 +41,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12">
-                                <textarea id="description" name="description" class="materialize-textarea">{{ old('description') }}</textarea>
-                                <label for="text">Description</label>
+                            <div class="col s12" style="height: 250px;">
+                                <textarea rows="15" name="description" id="description">{{ old('description') }}</textarea>
+                                {{--<label for="text">Description</label>--}}
                             </div>
                         </div>
                         <div class="row">
@@ -52,7 +52,6 @@
                                 <label for="title">Link</label>
                             </div>
                         </div>
-
 
                         <button class="btn waves-effect waves-light" type="submit" name="action">Add portfolio
                             <i class="material-icons right">send</i>
@@ -67,7 +66,24 @@
 
 @stop
 
+@section('styles')
+
+    <style>
+
+    </style>
+
+@stop
+
 @section('scripts')
+
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: '#description',
+            plugins: 'link',
+            menubar: false
+        });
+    </script>
 
     <script>
         $('.input-field input[type=file]').on('change', function() {
@@ -85,9 +101,11 @@
             fileReader.addEventListener('load', function() {
                 $('.preview').attr('src', fileReader.result);
             });
-
         });
 
+
+
     </script>
+
 
 @stop

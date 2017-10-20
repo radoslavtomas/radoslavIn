@@ -60,6 +60,15 @@
 
 @section('scripts')
 
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: '#text',
+            plugins: 'link',
+            menubar: false
+        });
+    </script>
+
     <script>
         $('.input-field input[type=file]').on('change', function() {
             var files = event.target.files;

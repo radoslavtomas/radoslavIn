@@ -19,7 +19,9 @@
                                 <img class="responsive-img circle" src="{{ $data->image }}" width="200" alt="Radoslav Tomas">
                             </div>
                         </div>
-                        <p>{{ $data->text }}</p>
+                        <div>
+                            {!! $data->text !!}
+                        </div>
                     </div>
                     <br>
 
