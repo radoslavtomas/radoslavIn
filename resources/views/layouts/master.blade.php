@@ -31,9 +31,9 @@
                         <div class="background">
                             <img src="img/sky.jpg">
                         </div>
-                        <a href="#!user"><img class="circle" src="{{ asset('img/rado.jpg') }}"></a>
-                        <a href="#!name"><span class="white-text name">Radoslav Tomas</span></a>
-                        <a href="#!email"><span class="white-text email">radoslav.tomas@gmail.com</span></a>
+                        <img class="circle" src="{{ $profile_picture }}">
+                        <a href="{{ route('index') }}"><span class="white-text name">Radoslav Tomas</span></a>
+                        <a href="mailto:radoslav.tomas@gmail.com"><span class="white-text email">radoslav.tomas@gmail.com</span></a>
                     </div></li>
                 <li><a href="{{ route('index') }}"><i class="material-icons">home</i>Home</a></li>
                 <li><a href="{{ route('about') }}"><i class="material-icons">perm_identity</i>About me</a></li>
@@ -49,16 +49,16 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Radoslav Tomas | radoslav.in</h5>
-                    <p class="grey-text text-lighten-4">Full stack web developer | Liverpool</p>
-                    <p class="grey-text text-lighten-4">radoslav.tomas@gmail.com</p>
+                    <h5 class="grey-text text-lighten-4">Radoslav Tomas <span style="color: #74d14c;">|</span> <a href="http://radoslav.in" class="grey-text text-lighten-4">radoslav.in</a></h5>
+                    <p class="grey-text text-lighten-4">Full stack web developer <span style="color: #74d14c;">|</span> Liverpool</p>
+                    <p><a class="grey-text text-lighten-4" href="mailto:radoslav.tomas@gamail.com">radoslav.tomas@gmail.com</a></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">About me</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Portfolio</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ route('index') }}">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ route('about') }}">About me</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ route('portfolio') }}">Portfolio</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,10 +77,10 @@
 @yield('scripts')
 <script>
     @if(Session::has('success'))
-    Materialize.toast("{{ Session::get('success') }}", 4000, 'green lighten-3 blue-grey-text text-darken-4');
+        Materialize.toast("{{ Session::get('success') }}", 4000, 'green lighten-3 blue-grey-text text-darken-4');
     @endif
     @if(Session::has('info'))
-    Materialize.toast("{{ Session::get('info') }}", 4000, 'deep-orange lighten-3 blue-grey-text text-darken-4');
+        Materialize.toast("{{ Session::get('info') }}", 4000, 'deep-orange lighten-3 blue-grey-text text-darken-4');
     @endif
 </script>
 

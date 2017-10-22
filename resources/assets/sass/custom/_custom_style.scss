@@ -1,0 +1,27 @@
+//  PORTFOLIO
+.carousel-wrapper {
+  position: relative;
+  top: -40px;
+}
+
+.carousel .carousel-item {
+  background-color: cadetblue;
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+}
+
+#post_description {
+  background-color: rgba(95,158,160,0.3);
+
+  .card-action {
+    background-color: rgba(95,158,160,0.3);
+  }
+}
+
+//  ADMIN
+.error {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+

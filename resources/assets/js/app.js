@@ -15,7 +15,6 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('wave-divider', require('./components/WaveDividerComponent.vue'));
 Vue.component('logo-rado', require('./components/LogoComponent.vue'));
 

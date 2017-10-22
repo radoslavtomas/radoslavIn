@@ -21,7 +21,7 @@
                     </div>
                     <br>
                     <div class="center">
-                        <a href="#" class="waves-effect waves-light btn-large">See my portfolio</a>
+                        <a href="{{ route('portfolio') }}" class="waves-effect waves-light btn-large">See my portfolio</a>
                     </div>
                     <br>
                     <br>

@@ -57,14 +57,3 @@
 
     </div>{{--end col s8--}}
 @endsection
-
-@section('styles')
-
-    <style>
-        .error {
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
-
-@stop

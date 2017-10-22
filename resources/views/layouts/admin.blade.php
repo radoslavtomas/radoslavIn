@@ -74,9 +74,6 @@
                                     <li class="collection-item">
                                         <a href="{{ route('portfolio.index') }}">Portfolio page</a>
                                     </li>
-                                    <li class="collection-item">
-                                        <a href="{{ route('getContact') }}">Contact page</a>
-                                    </li>
                                 </ul>
                     </div>
                 @endif
@@ -92,10 +89,10 @@
     @yield('scripts')
     <script>
         @if(Session::has('success'))
-        Materialize.toast("{{ Session::get('success') }}", 4000, 'green lighten-3 blue-grey-text text-darken-4');
+            Materialize.toast("{{ Session::get('success') }}", 4000, 'green lighten-3 blue-grey-text text-darken-4');
         @endif
         @if(Session::has('info'))
-        Materialize.toast("{{ Session::get('info') }}", 4000, 'deep-orange lighten-3 blue-grey-text text-darken-4');
+            Materialize.toast("{{ Session::get('info') }}", 4000, 'deep-orange lighten-3 blue-grey-text text-darken-4');
         @endif
     </script>
 </body>

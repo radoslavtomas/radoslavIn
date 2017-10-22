@@ -95,7 +95,6 @@
                 });
             }
         };
-
         tinymce.init(editor_config);
     </script>
 
@@ -115,19 +114,7 @@
             fileReader.addEventListener('load', function() {
                 $('.preview').attr('src', fileReader.result);
             });
-
         });
     </script>
-
-@stop
-
-@section('styles')
-
-    <style>
-        .error {
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
 
 @stop
