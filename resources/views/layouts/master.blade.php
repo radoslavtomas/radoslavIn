@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') | Radoslav Tomas</title>
+    <title>@yield('title') | {{ $profile->user->name }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -31,9 +31,9 @@
                         <div class="background">
                             <img src="img/sky.jpg">
                         </div>
-                        <img class="circle" src="{{ $profile_picture }}">
-                        <a href="{{ route('index') }}"><span class="white-text name">Radoslav Tomas</span></a>
-                        <a href="mailto:radoslav.tomas@gmail.com"><span class="white-text email">radoslav.tomas@gmail.com</span></a>
+                        <img class="circle" src="{{ $profile->avatar }}">
+                        <a href="{{ route('index') }}"><span class="white-text name">{{ $profile->user->name }}</span></a>
+                        <a href="mailto:{{ $profile->user->email }}"><span class="white-text email">{{ $profile->user->email }}</span></a>
                     </div></li>
                 <li><a href="{{ route('index') }}"><i class="material-icons">home</i>Home</a></li>
                 <li><a href="{{ route('about') }}"><i class="material-icons">perm_identity</i>About me</a></li>
@@ -49,9 +49,9 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="grey-text text-lighten-4">Radoslav Tomas <span style="color: #74d14c;">|</span> <a href="http://radoslav.in" class="grey-text text-lighten-4">radoslav.in</a></h5>
-                    <p class="grey-text text-lighten-4">Full stack web developer <span style="color: #74d14c;">|</span> Liverpool</p>
-                    <p><a class="grey-text text-lighten-4" href="mailto:radoslav.tomas@gamail.com">radoslav.tomas@gmail.com</a></p>
+                    <h5 class="grey-text text-lighten-4">{{ $profile->user->name }} <span style="color: #74d14c;">|</span> <a href="http://radoslav.in" class="grey-text text-lighten-4">radoslav.in</a></h5>
+                    <p class="grey-text text-lighten-4">{{ $profile->about }} <span style="color: #74d14c;">|</span> {{ $profile->city }}</p>
+                    <p><a class="grey-text text-lighten-4" href="mailto:{{ $profile->user->email }}">{{ $profile->user->email }}</a></p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <ul>

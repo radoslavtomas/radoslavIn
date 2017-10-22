@@ -5,7 +5,7 @@
 
         <div class="card">
             <div class="card-content">
-                <span class="card-title">About Page</span>
+                <span class="card-title">Your profile</span>
                 <hr>
                 <br>
                 @if ($errors->any())
@@ -18,23 +18,72 @@
                     </div>
                 @endif
                 <div class="row">
-                    <form class="col s12" action="{{ route('postAbout') }}" method="POST" enctype="multipart/form-data">
+                    <form class="col s12" action="{{ route('profile.update', ['profile' => $profile->id]) }}" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="patch">
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="title" name="title" type="text" value="{{ $data->title }}" class="validate">
-                                <label for="title">Title</label>
+                                <input id="name" name="name" type="text" value="{{ $profile->user->name }}" class="validate">
+                                <label for="title">Name</label>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col s12">
-                                <textarea id="text" rows="20" name="text">{{ $data->text }}</textarea>
-                                <label for="text">Main text</label>
+                            <div class="input-field col s12">
+                                <input id="email" name="email" type="email" value="{{ $profile->user->email }}" class="validate">
+                                <label for="title">Email</label>
                             </div>
                         </div>
 
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Edit About Page
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" name="password" type="password" value="" class="validate">
+                                <label for="title">Update password?</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img class="responsive-img preview" width="100" src="{{ $profile->avatar }}" alt="">
+                        </div>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Update your avatar?</span>
+                                <input name="avatar" type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" name="avatar_name" type="text">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="about" name="about" type="text" value="{{ $profile->about }}" class="validate">
+                                <label for="title">About</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="city" name="city" type="text" value="{{ $profile->city }}" class="validate">
+                                <label for="title">City</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="facebook" name="facebook" type="url" value="{{ $profile->facebook }}" class="validate">
+                                <label for="title">Facebook profile</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="linkedin" name="linkedin" type="url" value="{{ $profile->linkedin }}" class="validate">
+                                <label for="title">LinkedIn profile</label>
+                            </div>
+                        </div>
+
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Edit your profile
                             <i class="material-icons right">send</i>
                         </button>
                     </form>

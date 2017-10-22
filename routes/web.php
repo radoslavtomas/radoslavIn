@@ -34,7 +34,7 @@ Route::middleware('auth')->prefix('admin')->group(function() {
 
 	Route::resource('portfolio', 'PortfolioController');
 
-	Route::get('contact', 'AdminController@getContact')->name('getContact');
+	Route::resource('profile', 'ProfileController');
 });
 
 

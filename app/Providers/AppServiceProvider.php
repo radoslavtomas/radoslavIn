@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Aboutpage;
+use App\User;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,8 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-		$profile_picture = Aboutpage::all()->first()->image;
-		view::share('profile_picture', $profile_picture);
+    	$profile = User::all()->first()->profile;
+		view::share('profile', $profile);
     }
 
     /**

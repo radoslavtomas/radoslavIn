@@ -16,7 +16,7 @@
                         <h1 class="app-heading">{{ $data->title }}</h1>
                         <div class="row">
                             <div>
-                                <img class="responsive-img circle" src="{{ $data->image }}" width="200" alt="Radoslav Tomas">
+                                <img class="responsive-img circle" src="{{ $profile->avatar }}" width="200" alt="Radoslav Tomas">
                             </div>
                         </div>
                         <div>

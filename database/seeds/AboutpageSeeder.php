@@ -19,8 +19,7 @@ Few years ago, I’ve accepted a call of my heart and made a move to UK. Here I 
 
 Today, I work as freelancer and participate on various digital projects. I’ve never forgotten to ask why things are the way they are, and how they can be improved. I have a simple goal: make things better for the user.
 
-If you think I am the right person for your project, don’t hesitate to drop me a line or two. I don’t bite…',
-			'image' => 'img/rado.jpg',
+If you think I am the right person for your project, don’t hesitate to drop me a line or two. I don’t bite…'
 		]);
     }
 }

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'radoslav.in') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -73,6 +73,9 @@
                                     </li>
                                     <li class="collection-item">
                                         <a href="{{ route('portfolio.index') }}">Portfolio page</a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <a href="{{ route('profile.index') }}">Profile and settings</a>
                                     </li>
                                 </ul>
                     </div>
