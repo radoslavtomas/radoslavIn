@@ -168,6 +168,8 @@ return [
          * Package Service Providers...
          */
 		Mews\Purifier\PurifierServiceProvider::class,
+		Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
+		Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -227,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 		'Purifier' => Mews\Purifier\Facades\Purifier::class,
+		'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
