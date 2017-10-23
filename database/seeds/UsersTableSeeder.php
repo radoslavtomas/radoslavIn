@@ -22,8 +22,8 @@ class UsersTableSeeder extends Seeder
 			'avatar' => '/img/rado.jpg',
 			'about' => 'Full stack developer',
 			'city' => 'Liverpool',
-			'facebook' => 'facebook.com',
-			'linkedin' => 'linkedin.com'
+			'facebook' => 'https://www.facebook.com',
+			'linkedin' => 'https://www.linkedin.com'
 		]);
     }
 }

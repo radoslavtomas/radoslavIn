@@ -47,7 +47,7 @@
                         </div>
                         <div class="file-field input-field">
                             <div class="btn">
-                                <span>Update your avatar?</span>
+                                <span>File</span>
                                 <input name="avatar" type="file">
                             </div>
                             <div class="file-path-wrapper">
