@@ -17,10 +17,10 @@ class CreateProfilesTable extends Migration
             $table->increments('id');
 			$table->integer('user_id');
 			$table->string('avatar');
-			$table->text('about');
-			$table->string('city');
-			$table->string('facebook');
-			$table->string('linkedin');
+			$table->text('about')->nullable();
+			$table->string('city')->nullable();
+			$table->string('facebook')->nullable();
+			$table->string('linkedin')->nullable();
             $table->timestamps();
         });
     }

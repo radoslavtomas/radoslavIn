@@ -16,8 +16,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-    	$profile = User::all()->first()->profile;
-		view::share('profile', $profile);
+    	try
+		{
+			$profile = User::all()->first()->profile;
+			view::share('profile', $profile);
+		}
+		catch (\Exception $e)
+		{
+			return $e->getMessage();
+		}
+
     }
 
     /**
