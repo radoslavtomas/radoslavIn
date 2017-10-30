@@ -22,7 +22,7 @@
                 <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     @guest
-                        <li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>
+                        {{--<li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>--}}
                         {{--<li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>--}}
                     @else
                         <li>
@@ -38,7 +38,7 @@
                 </ul>
                 <ul class="side-nav" id="mobile-menu">
                     @guest
-                        <li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>
+                        {{--<li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>--}}
                         {{--<li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>--}}
                     @else
                         <li>
