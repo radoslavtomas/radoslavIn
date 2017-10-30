@@ -23,7 +23,7 @@
                 <ul class="right hide-on-med-and-down">
                     @guest
                         <li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>
-                        <li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>
+                        {{--<li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>--}}
                     @else
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="material-icons left">arrow_forward</i>
@@ -39,7 +39,7 @@
                 <ul class="side-nav" id="mobile-menu">
                     @guest
                         <li><a href="{{ route('login') }}"><i class="material-icons left">person</i>Login</a></li>
-                        <li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>
+                        {{--<li><a href="{{ route('register') }}"><i class="material-icons left">person_add</i>Register</a></li>--}}
                     @else
                         <li>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="material-icons left">arrow_forward</i>
