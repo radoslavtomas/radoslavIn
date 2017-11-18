@@ -7,7 +7,7 @@
     <br>
     <div class="row">
         <div class="col s12 m10 offset-m1">
-            <div class="card  green lighten-4">
+            <div class="card  blue lighten-4">
                 <br>
                 <wave-divider></wave-divider>
 
