@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17802a611664c115b1fdc4bee7cd2338",
-    "content-hash": "017f787a5fc629a006f14dcdece8da49",
+    "hash": "b9d06948d1e66c86e50e2ecd753522f2",
+    "content-hash": "e120cdaa82b481df4266fe874d27ed26",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2529,16 +2529,16 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
-            "version": "v1.8.2.1",
+            "version": "v1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UniSharp/laravel-filemanager.git",
-                "reference": "d214e13aaeee5ac58451cd84095bc73e343c988d"
+                "reference": "ccbba303a3a66a9706b50c98923af12e2f9ac02a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/d214e13aaeee5ac58451cd84095bc73e343c988d",
-                "reference": "d214e13aaeee5ac58451cd84095bc73e343c988d",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/ccbba303a3a66a9706b50c98923af12e2f9ac02a",
+                "reference": "ccbba303a3a66a9706b50c98923af12e2f9ac02a",
                 "shasum": ""
             },
             "require": {
@@ -2564,12 +2564,9 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Unisharp\\Laravelfilemanager\\LaravelFilemanagerServiceProvider",
-                        "Intervention\\Image\\ImageServiceProvider"
+                        "Unisharp\\Laravelfilemanager\\LaravelFilemanagerServiceProvider"
                     ],
-                    "aliases": {
-                        "Image": "Intervention\\Image\\Facades\\Image"
-                    }
+                    "aliases": []
                 }
             },
             "autoload": {
@@ -2602,7 +2599,7 @@
                 "tinymce",
                 "upload"
             ],
-            "time": "2017-10-17 07:38:16"
+            "time": "2017-12-28 09:23:53"
         },
         {
             "name": "vlucas/phpdotenv",

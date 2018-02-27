@@ -15,7 +15,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', 'PagesController@getIndex')->name('index');
 Route::get('about', 'PagesController@getAbout')->name('about');
-Route::get('portfolio', 'PagesController@getPortfolio')->name('portfolio');
+Route::get('portfolios', 'PagesController@getPortfolios')->name('portfolios');
+Route::get('portfolio/{slug}', 'PagesController@getPortfolio')->name('portfolio');
 Route::get('contact', 'PagesController@getContact')->name('contact');
 Route::post('contact', 'PagesController@postContact')->name('contact.post');
 

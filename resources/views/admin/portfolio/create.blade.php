@@ -28,6 +28,12 @@
                                 <label for="title">Name</label>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="slug" name="slug" type="text" value="{{ $portfolio->slug }}" class="validate">
+                                <label for="title">Slug</label>
+                            </div>
+                        </div>
                         <div>
                             <img class="responsive-img preview" width="100" src="" alt="">
                         </div>

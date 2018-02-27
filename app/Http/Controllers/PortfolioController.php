@@ -41,6 +41,7 @@ class PortfolioController extends Controller
     {
         $request->validate([
 			'name' => 'string|required',
+			'slug' => 'string|required',
 			'image' => 'image|required',
 			'description' => 'required',
 			'link' => 'url|required'
@@ -55,6 +56,7 @@ class PortfolioController extends Controller
 			'image' => '/uploads/img/portfolios/'.$image_new_name,
 			'description' => Purifier::clean($request->description),
 			'link' => $request->link,
+			'slug' => $request->slug,
 		]);
 
 		Session::flash('success', 'New portfolio was successfully added.');
@@ -99,6 +101,7 @@ class PortfolioController extends Controller
 		$request->validate([
 			'name' => 'string|required',
 			'description' => 'required',
+			'slug' => 'required',
 			'link' => 'url|required'
 		]);
 
@@ -116,7 +119,8 @@ class PortfolioController extends Controller
 		}
 
 		$portfolio->name = $request->name;
-		$portfolio->description = Purifier::clean($request->description);
+		$portfolio->slug = $request->slug;
+		$portfolio->description = $request->description;
 		$portfolio->link = $request->link;
 
 		$portfolio->save();

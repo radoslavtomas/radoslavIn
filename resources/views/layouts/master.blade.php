@@ -23,13 +23,13 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ route('index') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About me</a></li>
-                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ route('portfolios') }}">Portfolio</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
             <ul class="side-nav" id="mobile-menu">
                 <li><div class="user-view">
                         <div class="background">
-                            <img src="img/sky.jpg">
+                            <img src="{{ asset('img/sky.jpg') }}">
                         </div>
                         <img class="circle" src="{{ $profile->avatar }}">
                         <a href="{{ route('index') }}"><span class="white-text name">{{ $profile->user->name }}</span></a>
@@ -37,7 +37,7 @@
                     </div></li>
                 <li><a href="{{ route('index') }}"><i class="material-icons">home</i>Home</a></li>
                 <li><a href="{{ route('about') }}"><i class="material-icons">perm_identity</i>About me</a></li>
-                <li><a href="{{ route('portfolio') }}"><i class="material-icons">bubble_chart</i>Portfolio</a></li>
+                <li><a href="{{ route('portfolios') }}"><i class="material-icons">bubble_chart</i>Portfolio</a></li>
                 <li><a href="{{ route('contact') }}"><i class="material-icons">contact_mail</i>Contact</a></li>
             </ul>
         </div>
@@ -57,7 +57,7 @@
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="{{ route('index') }}">Home</a></li>
                         <li><a class="grey-text text-lighten-3" href="{{ route('about') }}">About me</a></li>
-                        <li><a class="grey-text text-lighten-3" href="{{ route('portfolio') }}">Portfolio</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{{ route('portfolios') }}">Portfolio</a></li>
                         <li><a class="grey-text text-lighten-3" href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </div>

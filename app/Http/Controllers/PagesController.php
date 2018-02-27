@@ -26,12 +26,19 @@ class PagesController extends Controller
 			->with('data', $data);
     }
 
-	public function getPortfolio()
+	public function getPortfolios()
 	{
 		$portfolios = Portfolio::all();
-		return view('pages.portfolio')
+		return view('pages.portfolios')
 			->with('portfolios', $portfolios);
     }
+
+	public function getPortfolio($slug)
+	{
+		$portfolio = Portfolio::where('slug', $slug)->firstOrFail();
+		return view('pages.portfolio')
+			->with('portfolio', $portfolio);
+	}
 
 	public function getContact()
 	{
