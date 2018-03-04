@@ -14,6 +14,7 @@ class PortfolioSeeder extends Seeder
 		\App\Portfolio::create([
 			'name' => 'kota.sk',
 			'image' => '/img/portfolios/kota.png',
+			'slug' => 'kota',
 			'description' => 'Jelly-o sugar plum carrot cake donut. Brownie sweet chupa chups gummi bears oat cake toffee pastry. Tiramisu dragée powder chupa chups macaroon. Jelly-o brownie toffee ice cream bonbon lollipop icing cotton candy.
 			
 Icing bonbon carrot cake. Sweet liquorice caramels lemon drops candy toffee. Powder oat cake macaroon.
@@ -25,6 +26,7 @@ Donut candy canes tart apple pie lemon drops sweet roll carrot cake cake dessert
 		\App\Portfolio::create([
 			'name' => 'radoslavtomas.com',
 			'image' => '/img/portfolios/radoslavtomas.png',
+			'slug' => 'radoslav-tomas',
 			'description' => 'Jelly-o sugar plum carrot cake donut. Brownie sweet chupa chups gummi bears oat cake toffee pastry. Tiramisu dragée powder chupa chups macaroon. Jelly-o brownie toffee ice cream bonbon lollipop icing cotton candy.
 			
 Icing bonbon carrot cake. Sweet liquorice caramels lemon drops candy toffee. Powder oat cake macaroon.
@@ -36,6 +38,7 @@ Donut candy canes tart apple pie lemon drops sweet roll carrot cake cake dessert
 		\App\Portfolio::create([
 			'name' => 'medan.sk',
 			'image' => '/img/portfolios/medan.png',
+			'slug' => 'medan',
 			'description' => 'Jelly-o sugar plum carrot cake donut. Brownie sweet chupa chups gummi bears oat cake toffee pastry. Tiramisu dragée powder chupa chups macaroon. Jelly-o brownie toffee ice cream bonbon lollipop icing cotton candy.
 			
 Icing bonbon carrot cake. Sweet liquorice caramels lemon drops candy toffee. Powder oat cake macaroon.
