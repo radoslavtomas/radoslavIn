@@ -115,7 +115,7 @@ class PortfolioController extends Controller
 			$image = $request->image;
 			$image_new_name = time().$image->getClientOriginalName();
 			$image->move('uploads/img/portfolios/', $image_new_name);
-			$portfolio->image = '/uploads/img/profiles/'.$image_new_name;
+			$portfolio->image = '/uploads/img/portfolios/'.$image_new_name;
 		}
 
 		$portfolio->name = $request->name;
