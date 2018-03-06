@@ -28,7 +28,7 @@ class PagesController extends Controller
 
 	public function getPortfolios()
 	{
-		$portfolios = Portfolio::all();
+		$portfolios = Portfolio::latest('created_at')->get();
 		return view('pages.portfolios')
 			->with('portfolios', $portfolios);
     }
