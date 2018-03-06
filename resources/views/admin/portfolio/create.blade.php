@@ -30,7 +30,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="slug" name="slug" type="text" value="{{ $portfolio->slug }}" class="validate">
+                                <input id="slug" name="slug" type="text" value="{{ old('portfolio') }}" class="validate">
                                 <label for="title">Slug</label>
                             </div>
                         </div>
